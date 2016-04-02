@@ -3,7 +3,7 @@
 // @namespace    https://github.com/AlexCatch/RobinCatFactsBot
 // @version      1
 // @description  Say @catfact
-// @author       AlexCastch
+// @author       AlexCatch
 // @match        https://www.reddit.com/robin/
 // @grant GM_xmlhttpRequest
 // @require http://code.jquery.com/jquery-latest.js
@@ -27,10 +27,12 @@
     {
         console.log('connected' + evt.data);
     }
+
     function onClose(evt)
     {
         writeToScreen("DISCONNECTED" + evt.data);
     }
+
     function onMessage(evt)
     {
         //recieved a message
@@ -54,6 +56,7 @@
             }, 2000);
         }
     }
+
     function onError(evt)
     {
         writeToScreen("error occured" + evt.data);
@@ -72,7 +75,7 @@
                 var jsonResponse = JSON.parse(responseDetails.response);
                 var fact = jsonResponse.facts[0];
                 console.log(fact.length);
-                if (fact.length > 139) {
+                if (fact.length > 137) {
                     console.log("fact is too long");
                     makeRequest(function(fact){
                         sendMessage(fact);
@@ -83,4 +86,7 @@
             }
         });
     }
+
+
+
 })();
