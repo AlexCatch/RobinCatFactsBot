@@ -21,7 +21,7 @@
     websocket.onmessage = function(evt) {onMessage(evt); };
     websocket.onerror = function(evt) {onError(evt);};
     //set interval for start message
-    setInterval(function(){ sendMessage("I am a bot, send me a message with @catfact for a cat fact!");}, 300000);
+    setInterval(function(){ sendMessage("I am a bot, send me a message with @catfact for a cat fact! [https://github.com/AlexCatch/RobinCatFactsBot]");}, 300000);
 
     function onOpen(evt)
     {
