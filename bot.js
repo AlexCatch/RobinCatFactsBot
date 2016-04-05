@@ -14,7 +14,7 @@
     var websocket,
         wsUri = r.config.robin_websocket_url,
         message = "I am a bot, send me a message like !CatFact or @catfacts for a cat fact! Or @Catpic or !catphoto for a cat picture ! [http://bit.ly/1RBu4O7]",
-		secretUsed = 0;
+	    secretUsed = 0;
 
     websocket = new WebSocket(wsUri);
     websocket.onmessage = function(evt) {onMessage(evt); };
@@ -117,7 +117,7 @@
 					case 27:
 						sendMessage("ALL OF YOU");
 					default:
-						sendMessage("There is no more messages, Congratulation, you have reached a point where no other humans have ever gone");
+						sendMessage("There are no more messages, Congratulation, you have reached a point where no other humans have ever gone");
 				}
 			}
         }
