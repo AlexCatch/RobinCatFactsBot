@@ -116,6 +116,7 @@
                         break;
                     case 27:
                         sendMessage("ALL OF YOU");
+                        break;
                     default:
                         sendMessage("There are no more messages, Congratulation, you have reached a point where no other humans have ever gone");
                 }
